@@ -23,7 +23,6 @@ const CTASection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Здесь будет логика отправки формы
     alert('Спасибо! Мы свяжемся с вами в течение часа.');
   };
 
@@ -31,20 +30,17 @@ const CTASection = () => {
     <section className="py-16 lg:py-24 bg-gradient-to-r from-primary to-accent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Получите бесплатную консультацию по автоматизации найма
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Получите бесплатную консультацию за 30 минут
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Рассчитайте экономию от внедрения за 2 минуты. 
-            Перезвоним в течение часа и покажем демо-версию
+            Рассчитаем экономию для вашей компании и покажем демо
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Form */}
           <Card className="p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Заявка на консультацию</h3>
-            
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -78,13 +74,14 @@ const CTASection = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  Email *
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="your@email.com"
                 />
@@ -92,13 +89,14 @@ const CTASection = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Компания
+                  Компания *
                 </label>
                 <input
                   type="text"
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Название компании"
                 />
@@ -112,9 +110,9 @@ const CTASection = () => {
                   name="employees"
                   value={formData.employees}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
-                  <option value="1-10">1-10 сотрудников</option>
                   <option value="10-50">10-50 сотрудников</option>
                   <option value="50-100">50-100 сотрудников</option>
                   <option value="100-500">100-500 сотрудников</option>
@@ -137,40 +135,28 @@ const CTASection = () => {
 
           {/* Benefits */}
           <div className="text-white space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Что вы получите:</h3>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <Phone className="w-8 h-8 text-white mr-4 mt-1" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">📞 Перезвоним в течение часа</h4>
+                  <p className="opacity-80">Персональная консультация по телефону в удобное для вас время</p>
+                </div>
+              </div>
               
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-white mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-1">Бесплатная консультация эксперта</h4>
-                    <p className="opacity-80">Персональный анализ ваших HR-процессов</p>
-                  </div>
+              <div className="flex items-start">
+                <Users className="w-8 h-8 text-white mr-4 mt-1" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">💻 Покажем демо системы</h4>
+                  <p className="opacity-80">Живая демонстрация возможностей платформы на примерах</p>
                 </div>
-                
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-white mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-1">Расчет экономии от автоматизации</h4>
-                    <p className="opacity-80">Точные цифры ROI для вашей компании</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-white mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-1">Демо-презентация решений</h4>
-                    <p className="opacity-80">Покажем, как работают наши системы</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-white mr-4 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-1">План внедрения под ключ</h4>
-                    <p className="opacity-80">Готовая дорожная карта автоматизации</p>
-                  </div>
+              </div>
+              
+              <div className="flex items-start">
+                <CheckCircle className="w-8 h-8 text-white mr-4 mt-1" />
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">📊 Рассчитаем ROI для вашего бизнеса</h4>
+                  <p className="opacity-80">Точный расчет экономии времени и денег от автоматизации</p>
                 </div>
               </div>
             </div>
@@ -199,6 +185,16 @@ const CTASection = () => {
                 </a>
                 
                 <a 
+                  href="https://t.me/+79177969222" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:text-accent transition-colors"
+                >
+                  <Users className="w-5 h-5 mr-3" />
+                  Telegram
+                </a>
+                
+                <a 
                   href="mailto:r.zinnurov@gmail.com" 
                   className="flex items-center hover:text-accent transition-colors"
                 >
@@ -206,15 +202,10 @@ const CTASection = () => {
                   r.zinnurov@gmail.com
                 </a>
               </div>
-            </div>
-
-            {/* Guarantee */}
-            <div className="bg-white/10 rounded-lg p-6 text-center">
-              <h4 className="font-semibold mb-2">Гарантия результата</h4>
-              <p className="opacity-80 text-sm">
-                Готовые кандидаты за 2-4 дня или возврат средств. 
-                Бесплатная техподдержка в течение года.
-              </p>
+              
+              <div className="mt-4 text-sm opacity-80">
+                <strong>Регион:</strong> Республика Башкортостан
+              </div>
             </div>
           </div>
         </div>
