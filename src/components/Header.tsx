@@ -22,11 +22,11 @@ const Header = () => {
             <a href="#services" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Услуги
             </a>
+            <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors font-medium">
+              Тарифы
+            </a>
             <a href="#cases" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Кейсы
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              О нас
             </a>
             <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Контакты
@@ -40,7 +40,7 @@ const Header = () => {
               <span className="font-medium">+7 (917) 796-92-22</span>
             </a>
             <Button className="bg-primary hover:bg-primary/90">
-              Получить консультацию
+              Консультация
             </Button>
           </div>
 
@@ -67,18 +67,18 @@ const Header = () => {
                 Услуги
               </a>
               <a
+                href="#pricing"
+                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Тарифы
+              </a>
+              <a
                 href="#cases"
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Кейсы
-              </a>
-              <a
-                href="#about"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                О нас
               </a>
               <a
                 href="#contacts"
@@ -93,7 +93,7 @@ const Header = () => {
                   <span className="font-medium">+7 (917) 796-92-22</span>
                 </a>
                 <Button className="w-full bg-primary hover:bg-primary/90">
-                  Получить консультацию
+                  Консультация
                 </Button>
               </div>
             </div>

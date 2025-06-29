@@ -12,78 +12,40 @@ const HeroSection = () => {
           <div className="lg:pr-8">
             <div className="animate-fade-in">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Автоматизируем найм и обучение сотрудников с помощью{' '}
-                <span className="text-primary">передовых IT-решений</span>
+                Готовые к работе сотрудники{' '}
+                <span className="text-primary">за 2-4 дня</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Помогаем HR-отделам получать готовых к работе кандидатов за 2-4 дня 
-                вместо месяцев поиска. Интеграция с HH.ru, автоматическое обучение, 
-                готовые модули для любой отрасли
+                Автоматизируем найм и обучение персонала. Интеграция с HH.ru, готовые программы для любой отрасли, экономия 70% времени HR-отдела
               </p>
 
-              {/* Key Benefits */}
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">10+ готовых кандидатов за неделю</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Экономия 70% времени HR</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Снижение текучки на 40%</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Рост продаж на 25%</span>
-                </div>
-              </div>
-
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-lg px-8 py-4"
                 >
-                  Получить бесплатную консультацию
+                  Получить консультацию
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4"
+                  className="border-accent text-accent hover:bg-accent hover:text-white text-lg px-8 py-4"
                 >
                   Рассчитать экономию
                 </Button>
               </div>
 
               {/* Trust Indicators */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <p className="text-sm text-gray-500 mb-4">Нам доверяют:</p>
-                <div className="flex items-center space-x-8">
-                  <div className="flex items-center">
-                    <Users className="w-6 h-6 text-primary mr-2" />
-                    <div>
-                      <div className="font-bold text-lg">50+</div>
-                      <div className="text-sm text-gray-500">компаний</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-6 h-6 text-primary mr-2" />
-                    <div>
-                      <div className="font-bold text-lg">2000+</div>
-                      <div className="text-sm text-gray-500">часов сэкономлено</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <TrendingUp className="w-6 h-6 text-primary mr-2" />
-                    <div>
-                      <div className="font-bold text-lg">500+</div>
-                      <div className="text-sm text-gray-500">сотрудников нанято</div>
-                    </div>
-                  </div>
+              <div className="flex items-center space-x-8 text-gray-600">
+                <div className="flex items-center">
+                  <span className="text-2xl mr-2">⭐</span>
+                  <span className="font-medium">50+ успешных внедрений</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-2xl mr-2">📞</span>
+                  <span className="font-medium">Консультация за 30 минут</span>
                 </div>
               </div>
             </div>
