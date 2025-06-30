@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -92,7 +93,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-6 mt-8 text-center text-gray-400">
-          <p>&copy; 2025 naimer.pro | <a href="/offer" className="hover:text-primary transition-colors">Оферта</a> | <a href="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</a></p>
+          <p>&copy; 2025 naimer.pro | <Link to="/offer" className="hover:text-primary transition-colors">Оферта</Link> | <Link to="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</Link></p>
         </div>
       </div>
     </footer>
