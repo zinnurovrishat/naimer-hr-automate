@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">naimer.pro</h3>
+            <img 
+              src="/lovable-uploads/bd7b4ce6-287f-448e-b4aa-1acb84a41607.png" 
+              alt="naimer.pro" 
+              className="h-8 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-gray-300 mb-6">
               Автоматизация найма и обучения сотрудников с помощью передовых IT-решений
             </p>

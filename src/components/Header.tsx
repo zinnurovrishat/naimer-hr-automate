@@ -14,7 +14,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">naimer.pro</h1>
+            <img 
+              src="/lovable-uploads/bd7b4ce6-287f-448e-b4aa-1acb84a41607.png" 
+              alt="naimer.pro" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
