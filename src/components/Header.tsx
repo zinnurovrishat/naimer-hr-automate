@@ -17,7 +17,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/bd7b4ce6-287f-448e-b4aa-1acb84a41607.png" 
               alt="naimer.pro" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
