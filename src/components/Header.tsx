@@ -8,6 +8,13 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleConsultationClick = () => {
+    const ctaSection = document.getElementById('contacts');
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +24,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
               alt="naimer.pro" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
@@ -43,7 +50,10 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               <span className="font-medium">+7 (917) 796-92-22</span>
             </a>
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button 
+              className="bg-primary hover:bg-primary/90"
+              onClick={handleConsultationClick}
+            >
               Консультация
             </Button>
           </div>
@@ -96,7 +106,10 @@ const Header = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   <span className="font-medium">+7 (917) 796-92-22</span>
                 </a>
-                <Button className="w-full bg-primary hover:bg-primary/90">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90"
+                  onClick={handleConsultationClick}
+                >
                   Консультация
                 </Button>
               </div>

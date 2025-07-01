@@ -4,6 +4,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, CheckCircle, Users, Clock, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
+  const handleConsultationClick = () => {
+    const ctaSection = document.getElementById('contacts');
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleCalculateClick = () => {
+    const roiSection = document.querySelector('[data-section="roi-calculator"]');
+    if (roiSection) {
+      roiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,6 +39,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-lg px-8 py-4"
+                  onClick={handleConsultationClick}
                 >
                   Получить консультацию
                 </Button>
@@ -32,6 +47,7 @@ const HeroSection = () => {
                   variant="outline" 
                   size="lg"
                   className="border-accent text-accent hover:bg-accent hover:text-white text-lg px-8 py-4"
+                  onClick={handleCalculateClick}
                 >
                   Рассчитать экономию
                 </Button>

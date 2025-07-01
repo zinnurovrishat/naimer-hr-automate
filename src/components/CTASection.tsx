@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -27,7 +26,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-r from-primary to-accent">
+    <section id="contacts" className="py-16 lg:py-24 bg-gradient-to-r from-primary to-accent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
