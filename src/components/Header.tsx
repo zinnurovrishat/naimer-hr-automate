@@ -18,13 +18,13 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
               src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
               alt="naimer.pro" 
-              className="h-48 w-auto"
+              className="h-16 md:h-72 w-auto"
             />
           </div>
 

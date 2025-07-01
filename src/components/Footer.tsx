@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <img 
               src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
               alt="naimer.pro" 
-              className="h-48 w-auto mb-4"
+              className="h-24 md:h-72 w-auto mb-4"
             />
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6 text-center lg:text-left">
               Автоматизация найма и обучения сотрудников с помощью передовых IT-решений
             </p>
           </div>
