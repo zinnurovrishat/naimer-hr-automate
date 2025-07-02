@@ -1,13 +1,34 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const PersonalDataConsent = () => {
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Close button */}
+        <div className="fixed top-24 right-4 z-50">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handleClose}
+            className="bg-white shadow-lg hover:bg-gray-50"
+          >
+            <X className="w-4 h-4" />
+          </Button>
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900 mb-8">
             Согласие на обработку персональных данных

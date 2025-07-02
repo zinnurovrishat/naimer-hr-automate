@@ -2,14 +2,23 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleConsultationClick = () => {
     window.location.href = 'tel:+79177969222';
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      // Если на главной странице, прокрутить к верху
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -18,11 +27,23 @@ const Header = () => {
         <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
-              alt="naimer.pro" 
-              className="h-16 md:h-72 w-auto"
-            />
+            {location.pathname === '/' ? (
+              <button onClick={handleLogoClick} className="focus:outline-none">
+                <img 
+                  src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
+                  alt="naimer.pro" 
+                  className="h-16 md:h-72 w-auto hover:opacity-90 transition-opacity cursor-pointer"
+                />
+              </button>
+            ) : (
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
+                  alt="naimer.pro" 
+                  className="h-16 md:h-72 w-auto hover:opacity-90 transition-opacity"
+                />
+              </Link>
+            )}
           </div>
 
           {/* Desktop Navigation */}

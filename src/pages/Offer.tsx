@@ -11,15 +11,33 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowLeft, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Offer = () => {
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Close button */}
+        <div className="fixed top-24 right-4 z-50">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handleClose}
+            className="bg-white shadow-lg hover:bg-gray-50"
+          >
+            <X className="w-4 h-4" />
+          </Button>
+        </div>
+
         {/* Breadcrumbs */}
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
