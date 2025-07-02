@@ -95,9 +95,15 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-800 pt-6 mt-8 text-center text-gray-400">
-          <p>&copy; 2025 naimer.pro | <Link to="/offer" className="hover:text-primary transition-colors">Оферта</Link> | <Link to="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</Link></p>
+        {/* Legal Entity and Copyright */}
+        <div className="border-t border-gray-800 pt-6 mt-8">
+          <div className="text-center text-gray-400 mb-4">
+            <p className="font-medium">ИП Зиннуров Ришат Мидхатович</p>
+            <p>ИНН: 026800071886</p>
+          </div>
+          <div className="text-center text-gray-400">
+            <p>&copy; 2025 naimer.pro | <Link to="/offer" className="hover:text-primary transition-colors">Оферта</Link> | <Link to="/privacy" className="hover:text-primary transition-colors">Политика конфиденциальности</Link> | <Link to="/personal-data-consent" className="hover:text-primary transition-colors">Согласие на обработку персональных данных</Link></p>
+          </div>
         </div>
       </div>
     </footer>

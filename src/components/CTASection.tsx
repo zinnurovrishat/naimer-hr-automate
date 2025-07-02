@@ -1,7 +1,10 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, Users, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +14,7 @@ const CTASection = () => {
     company: '',
     employees: '10-50'
   });
+  const [consentChecked, setConsentChecked] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
@@ -21,6 +25,10 @@ const CTASection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consentChecked) {
+      alert('Необходимо дать согласие на обработку персональных данных');
+      return;
+    }
     console.log('Form submitted:', formData);
     alert('Спасибо! Мы свяжемся с вами в течение часа.');
   };
@@ -119,15 +127,41 @@ const CTASection = () => {
                 </select>
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
+              {/* Consent Checkbox */}
+              <div className="flex items-start space-x-3 pt-4">
+                <Checkbox
+                  id="consent"
+                  checked={consentChecked}
+                  onCheckedChange={(checked) => setConsentChecked(checked as boolean)}
+                  required
+                />
+                <label htmlFor="consent" className="text-sm text-gray-600 leading-5">
+                  Я соглашаюсь с{' '}
+                  <Link 
+                    to="/personal-data-consent" 
+                    target="_blank"
+                    className="text-primary hover:underline"
+                  >
+                    обработкой персональных данных
+                  </Link>
+                  {' '}и даю согласие на получение информационных и рекламных сообщений
+                </label>
+              </div>
+
+              <Button 
+                type="submit" 
+                className="w-full bg-primary hover:bg-primary/90" 
+                size="lg"
+                disabled={!consentChecked}
+              >
                 Получить консультацию
               </Button>
 
               <p className="text-xs text-gray-500 text-center">
                 Нажимая кнопку, вы соглашаетесь с{' '}
-                <a href="/privacy" className="text-primary hover:underline">
+                <Link to="/privacy" className="text-primary hover:underline">
                   политикой конфиденциальности
-                </a>
+                </Link>
               </p>
             </form>
           </Card>
