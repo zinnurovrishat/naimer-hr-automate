@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { TrendingUp, Clock, Users } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ResultsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const results = [
     {
       company: "Юридическая компания (Ростов-на-Дону)",
@@ -30,7 +33,10 @@ const ResultsSection = () => {
   return (
     <section className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 scroll-fade-in ${isVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Реальные результаты наших клиентов
           </h2>
@@ -42,7 +48,8 @@ const ResultsSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className={`bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow scroll-fade-in ${isVisible ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 0.2}s` }}
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <IconComponent className="w-8 h-8 text-primary" />
