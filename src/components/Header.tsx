@@ -9,10 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleConsultationClick = () => {
-    const ctaSection = document.getElementById('contacts');
-    if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = 'tel:+79177969222';
   };
 
   return (

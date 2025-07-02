@@ -5,10 +5,7 @@ import { ArrowDown, CheckCircle, Users, Clock, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
   const handleConsultationClick = () => {
-    const ctaSection = document.getElementById('contacts');
-    if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = 'tel:+79177969222';
   };
 
   const handleCalculateClick = () => {

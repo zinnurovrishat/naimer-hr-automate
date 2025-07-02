@@ -31,8 +31,12 @@ const ROICalculator = () => {
   const roi = ((yearlyEconomics - automationCost) / automationCost) * 100;
   const paybackMonths = automationCost / ((totalCurrentCosts - totalWithAutomation) || 1);
 
+  const handleConsultationClick = () => {
+    window.location.href = 'tel:+79177969222';
+  };
+
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+    <section data-section="roi-calculator" className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -200,7 +204,11 @@ const ROICalculator = () => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90" 
+                size="lg"
+                onClick={handleConsultationClick}
+              >
                 Получить персональный расчет
               </Button>
             </div>
