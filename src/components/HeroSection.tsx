@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowDown, CheckCircle, Users, Clock, TrendingUp } from 'lucide-react';
+import { ArrowDown, CheckCircle, Users, Clock, TrendingUp, Target, Zap, Award } from 'lucide-react';
 
 const HeroSection = () => {
-  const handleConsultationClick = () => {
+  const handleZoomClick = () => {
     window.location.href = 'tel:+79177969222';
   };
 
@@ -16,96 +16,125 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16 lg:py-24">
+    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="lg:pr-8">
             <div className="animate-fade-in">
+              {/* Trust badge */}
+              <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Гарантия результата
+              </div>
+
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Готовые к работе сотрудники{' '}
-                <span className="text-primary">за 2-4 дня</span>
+                Собираем отдел продаж{' '}
+                <span className="text-blue-600">за 3 дня</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Автоматизируем найм и обучение персонала. Интеграция с HH.ru, готовые программы для любой отрасли, экономия 70% времени HR-отдела
+                Подбор, адаптация и мотивация кандидатов без HR. 
+                Готовые продавцы с первого дня работы
               </p>
+
+              {/* Key benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                <div className="flex items-center text-gray-700">
+                  <Target className="w-5 h-5 text-blue-600 mr-3" />
+                  <span className="font-medium">Точный подбор</span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <Zap className="w-5 h-5 text-blue-600 mr-3" />
+                  <span className="font-medium">Быстрый старт</span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <Award className="w-5 h-5 text-blue-600 mr-3" />
+                  <span className="font-medium">Высокий результат</span>
+                </div>
+              </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-lg px-8 py-4"
-                  onClick={handleConsultationClick}
+                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4 shadow-lg"
+                  onClick={handleZoomClick}
                 >
-                  Получить консультацию
+                  Записаться на Zoom-презентацию
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-accent text-accent hover:bg-accent hover:text-white text-lg px-8 py-4"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 text-lg px-8 py-4"
                   onClick={handleCalculateClick}
                 >
-                  Рассчитать экономию
+                  Рассчитать стоимость
                 </Button>
               </div>
 
-              {/* Trust Indicators */}
+              {/* Social proof */}
               <div className="flex items-center space-x-8 text-gray-600">
                 <div className="flex items-center">
-                  <span className="text-2xl mr-2">⭐</span>
-                  <span className="font-medium">50+ успешных внедрений</span>
+                  <span className="text-2xl mr-2">🎯</span>
+                  <span className="font-medium">87% закрывают план продаж</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-2xl mr-2">📞</span>
-                  <span className="font-medium">Консультация за 30 минут</span>
+                  <span className="text-2xl mr-2">⚡</span>
+                  <span className="font-medium">3 дня до работы</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Results Dashboard */}
           <div className="lg:pl-8">
             <div className="relative animate-slide-up">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full translate-y-12 -translate-x-12"></div>
+              <div className="bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden border border-gray-100">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-blue-100 rounded-full translate-y-12 -translate-x-12"></div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Автоматизация найма в цифрах
-                  </h3>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Результаты клиентов
+                    </h3>
+                    <div className="flex items-center text-green-600">
+                      <TrendingUp className="w-5 h-5 mr-1" />
+                      <span className="text-sm font-medium">+127%</span>
+                    </div>
+                  </div>
                   
                   <div className="space-y-6">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Время поиска кандидата</span>
+                      <span className="text-gray-600">Скорость закрытия вакансий</span>
                       <div className="text-right">
-                        <div className="text-sm text-gray-400 line-through">30 дней</div>
-                        <div className="text-lg font-bold text-green-600">2-4 дня</div>
+                        <div className="text-sm text-gray-400 line-through">21 день</div>
+                        <div className="text-lg font-bold text-green-600">3 дня</div>
                       </div>
                     </div>
                     
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Успешная адаптация</span>
+                      <span className="text-gray-600">Выполнение плана продаж</span>
                       <div className="text-right">
-                        <div className="text-sm text-gray-400 line-through">60%</div>
-                        <div className="text-lg font-bold text-green-600">85%</div>
+                        <div className="text-sm text-gray-400 line-through">64%</div>
+                        <div className="text-lg font-bold text-green-600">87%</div>
                       </div>
                     </div>
                     
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Текучесть персонала</span>
+                      <span className="text-gray-600">Удержание сотрудников</span>
                       <div className="text-right">
-                        <div className="text-sm text-gray-400 line-through">25%</div>
-                        <div className="text-lg font-bold text-green-600">15%</div>
+                        <div className="text-sm text-gray-400 line-through">3 мес</div>
+                        <div className="text-lg font-bold text-green-600">12+ мес</div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-8 p-4 bg-primary/5 rounded-lg">
+                  <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">700,000₽</div>
-                      <div className="text-sm text-gray-600">экономия в год на одном HR-менеджере</div>
+                      <div className="text-2xl font-bold text-blue-600">1,200,000₽</div>
+                      <div className="text-sm text-gray-600">прибыль с одного продавца в год</div>
                     </div>
                   </div>
                 </div>
@@ -116,7 +145,7 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <div className="text-center mt-16">
-          <ArrowDown className="w-6 h-6 text-primary mx-auto animate-bounce" />
+          <ArrowDown className="w-6 h-6 text-blue-600 mx-auto animate-bounce" />
         </div>
       </div>
     </section>
