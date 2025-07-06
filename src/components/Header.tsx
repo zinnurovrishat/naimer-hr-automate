@@ -54,10 +54,10 @@ const Header = () => {
             <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Тарифы
             </a>
-            <a href="#cases" className="text-gray-700 hover:text-primary transition-colors font-medium">
+            <a href="#client-cases" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Кейсы
             </a>
-            <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors font-medium">
+            <a href="#demo-call" className="text-gray-700 hover:text-primary transition-colors font-medium">
               Контакты
             </a>
           </nav>
@@ -106,14 +106,14 @@ const Header = () => {
                 Тарифы
               </a>
               <a
-                href="#cases"
+                href="#client-cases"
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Кейсы
               </a>
               <a
-                href="#contacts"
+                href="#demo-call"
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >

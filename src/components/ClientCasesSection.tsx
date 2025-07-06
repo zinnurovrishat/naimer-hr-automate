@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, GraduationCap, Clock, Users, Target, TrendingUp } from 'lucide-react';
@@ -39,7 +38,7 @@ const ClientCasesSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section id="client-cases" className="py-16 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={ref}
