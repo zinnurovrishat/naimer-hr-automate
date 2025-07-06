@@ -32,7 +32,7 @@ const Header = () => {
                 <img 
                   src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
                   alt="naimer.pro" 
-                  className="h-16 md:h-72 w-auto hover:opacity-90 transition-opacity cursor-pointer"
+                  className="h-20 md:h-72 w-auto hover:opacity-90 transition-opacity cursor-pointer"
                 />
               </button>
             ) : (
@@ -40,7 +40,7 @@ const Header = () => {
                 <img 
                   src="/lovable-uploads/4a876620-250a-4c5e-a512-d4acc355794e.png" 
                   alt="naimer.pro" 
-                  className="h-16 md:h-72 w-auto hover:opacity-90 transition-opacity"
+                  className="h-20 md:h-72 w-auto hover:opacity-90 transition-opacity"
                 />
               </Link>
             )}
