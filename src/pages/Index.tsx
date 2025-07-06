@@ -10,6 +10,7 @@ import StatsSection from '@/components/StatsSection';
 import FAQSection from '@/components/FAQSection';
 import TelegramSection from '@/components/TelegramSection';
 import DemoCallSection from '@/components/DemoCallSection';
+import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import StickyConsultButton from '@/components/StickyConsultButton';
@@ -30,6 +31,7 @@ const Index = () => {
       <FAQSection />
       <TelegramSection />
       <DemoCallSection />
+      <AboutSection />
       <Footer />
       <StickyConsultButton />
     </div>
