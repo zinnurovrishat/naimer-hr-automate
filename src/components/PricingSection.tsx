@@ -54,22 +54,22 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Тарифы
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4 sm:mb-6 px-4">
             Кандидаты по фиксированной цене, никаких звонков и рутин
           </p>
-          <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
-            <CheckCircle className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mx-4">
+            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
             Все кандидаты уже прошли скрининг и готовы к старту
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 lg:px-0">
           {plans.map((plan, index) => (
             <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
               plan.isPopular 
@@ -77,33 +77,33 @@ const PricingSection = () => {
                 : 'border-gray-200 hover:border-blue-300'
             }`}>
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
-                    <Star className="w-4 h-4 mr-1" />
+                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium flex items-center">
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                     Популярный
                   </div>
                 </div>
               )}
               
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.candidates}</p>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>
-                  <p className="text-sm text-gray-500">Фиксированная стоимость</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base">{plan.candidates}</p>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>
+                  <p className="text-xs sm:text-sm text-gray-500">Фиксированная стоимость</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Button 
-                  className={`w-full py-3 text-lg font-medium ${
+                  className={`w-full py-2.5 sm:py-3 text-base sm:text-lg font-medium ${
                     plan.isPopular 
                       ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
@@ -117,14 +117,14 @@ const PricingSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
+        <div className="text-center mt-8 sm:mt-12 px-4">
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">
             Не подходит ни один тариф? Обсудим индивидуальные условия
           </p>
           <Button 
             variant="outline" 
             size="lg"
-            className="border-gray-300 text-gray-700 hover:bg-gray-50"
+            className="border-gray-300 text-gray-700 hover:bg-gray-50 text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
             onClick={handleZoomClick}
           >
             Индивидуальный расчет
