@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -15,6 +14,7 @@ import DemoCallSection from '@/components/DemoCallSection';
 import Footer from '@/components/Footer';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import StickyConsultButton from '@/components/StickyConsultButton';
+import ClientCasesSection from '@/components/ClientCasesSection';
 
 const Index = () => {
   return (
@@ -27,6 +27,7 @@ const Index = () => {
       <ProblemsSection />
       <PricingSection />
       <ResultsSection />
+      <ClientCasesSection />
       <StatsSection />
       <FAQSection />
       <ROICalculator />
