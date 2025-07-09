@@ -59,7 +59,7 @@ const Privacy = () => {
           
           <div className="prose prose-lg max-w-none" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
             <div className="text-center mb-8 text-gray-600">
-              <p>Дата последнего обновления: 30 декабря 2024 г.</p>
+              <p>Дата последнего обновления: 09 июля 2025 г.</p>
             </div>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. ОБЩИЕ ПОЛОЖЕНИЯ</h2>

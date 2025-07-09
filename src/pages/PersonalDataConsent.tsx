@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -111,7 +112,7 @@ const PersonalDataConsent = () => {
             </div>
 
             <p className="mt-8 text-sm text-gray-600">
-              Дата последнего обновления: 02.07.2025
+              Дата последнего обновления: 09.07.2025
             </p>
           </div>
         </div>
