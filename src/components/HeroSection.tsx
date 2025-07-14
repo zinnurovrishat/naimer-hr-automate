@@ -29,13 +29,12 @@ const HeroSection = () => {
               </div>
 
               <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
-                Собираем отдел продаж{' '}
-                <span className="text-blue-600">за 3 дня</span>
+                Готовые к работе сотрудники{' '}
+                <span className="text-blue-600">за 2-3 дня</span>
               </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-2 lg:px-0">
-                Подбор, адаптация и мотивация кандидатов без HR. 
-                Готовые продавцы с первого дня работы
+                Получите кандидатов, которые уже знают вашу компанию, продукт и готовы показать результат с первого дня
               </p>
 
               {/* Key benefits */}
@@ -54,6 +53,16 @@ const HeroSection = () => {
                 </div>
               </div>
 
+              {/* Special Offer */}
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-4 mb-6 sm:mb-8 mx-4 lg:mx-0">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-orange-600 mb-1">🎁 СПЕЦПРЕДЛОЖЕНИЕ для новых клиентов:</div>
+                  <div className="text-base text-gray-700">
+                    <span className="font-semibold">15 готовых кандидатов по цене 5</span> (99,500₽ вместо 150,000₽)
+                  </div>
+                </div>
+              </div>
+
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 px-4 lg:px-0">
                 <Button 
@@ -61,7 +70,7 @@ const HeroSection = () => {
                   className="bg-blue-600 hover:bg-blue-700 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-lg w-full sm:w-auto"
                   onClick={handleZoomClick}
                 >
-                  Записаться на Zoom-презентацию
+                  Получить кандидатов на этой неделе
                 </Button>
                 <Button 
                   variant="outline" 
@@ -81,7 +90,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex items-center">
                   <span className="text-lg sm:text-2xl mr-2">⚡</span>
-                  <span className="font-medium">3 дня до работы</span>
+                  <span className="font-medium">2-3 дня до работы</span>
                 </div>
               </div>
             </div>
@@ -107,11 +116,11 @@ const HeroSection = () => {
                   
                   <div className="space-y-4 sm:space-y-6">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Скорость закрытия вакансий</span>
-                      <div className="text-right">
-                        <div className="text-xs sm:text-sm text-gray-400 line-through">21 день</div>
-                        <div className="text-sm sm:text-base lg:text-lg font-bold text-green-600">3 дня</div>
-                      </div>
+                       <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Скорость закрытия вакансий</span>
+                       <div className="text-right">
+                         <div className="text-xs sm:text-sm text-gray-400 line-through">21 день</div>
+                         <div className="text-sm sm:text-base lg:text-lg font-bold text-green-600">2-3 дня</div>
+                       </div>
                     </div>
                     
                     <div className="flex justify-between items-center">

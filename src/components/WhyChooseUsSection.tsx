@@ -23,6 +23,11 @@ const WhyChooseUsSection = () => {
       icon: <Clock className="w-8 h-8 text-blue-600" />,
       title: "Вы экономите недели подбора и общения с «не теми»",
       description: "Фокусируйтесь на бизнесе, а не на рутинном HR"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-blue-600" />,
+      title: "Объективный выбор лучших",
+      description: "Получаете 5-25 кандидатов одновременно - сравниваете результаты в работе и выбираете топов"
     }
   ];
 
@@ -38,7 +43,7 @@ const WhyChooseUsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex flex-col items-center text-center">
