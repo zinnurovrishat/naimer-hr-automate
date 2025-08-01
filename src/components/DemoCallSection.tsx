@@ -125,7 +125,7 @@ const DemoCallSection = () => {
                 className="w-full bg-primary hover:bg-primary/90 text-base sm:text-lg py-3" 
                 size="lg"
               >
-                Записаться
+                Записаться на презентацию (10 минут)
               </Button>
             </form>
           </Card>

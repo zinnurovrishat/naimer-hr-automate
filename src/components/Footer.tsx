@@ -16,7 +16,7 @@ const Footer = () => {
               className="h-24 md:h-72 w-auto mb-4"
             />
             <p className="text-gray-300 mb-6 text-center lg:text-left">
-              Автоматизация найма и обучения сотрудников с помощью передовых IT-решений
+              Автоматизированный подбор готовых к работе сотрудников через систему Edler.pro
             </p>
           </div>
 
@@ -26,22 +26,17 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <a href="#services" className="hover:text-primary transition-colors">
-                  LMS-платформа
+                  Подбор персонала
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-primary transition-colors">
-                  Автонайм
+                  Консультации по найму
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-primary transition-colors">
-                  Готовые модули
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-primary transition-colors">
-                  Консультации
+                  Настройка процессов
                 </a>
               </li>
             </ul>

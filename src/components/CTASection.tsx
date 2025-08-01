@@ -154,7 +154,7 @@ const CTASection = () => {
                 size="lg"
                 disabled={!consentChecked}
               >
-                Получить консультацию
+                Получить кандидатов на этой неделе
               </Button>
 
               <p className="text-xs text-gray-500 text-center">

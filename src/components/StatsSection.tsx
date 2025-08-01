@@ -6,22 +6,22 @@ const StatsSection = () => {
     {
       number: "50+",
       label: "компаний",
-      description: "внедрили систему"
+      description: "получили готовых сотрудников"
     },
     {
       number: "500+",
-      label: "сотрудников",
-      description: "прошли обучение"
+      label: "кандидатов",
+      description: "прошли полную подготовку"
     },
     {
-      number: "70%",
-      label: "экономии",
-      description: "времени HR-отдела"
+      number: "87%",
+      label: "клиентов",
+      description: "продолжают сотрудничество"
     },
     {
-      number: "2-4",
+      number: "2-3",
       label: "дня",
-      description: "готовые кандидаты"
+      description: "до получения первых кандидатов"
     }
   ];
 
