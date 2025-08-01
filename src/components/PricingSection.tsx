@@ -110,11 +110,33 @@ const PricingSection = () => {
                   }`}
                   onClick={handleZoomClick}
                 >
-                  Выбрать тариф
+                  Заказать готовых кандидатов
                 </Button>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Гарантии и дополнительные преимущества */}
+        <div className="bg-green-50 rounded-xl p-6 mt-8 sm:mt-12 mx-4 lg:mx-0">
+          <div className="grid sm:grid-cols-2 gap-4 text-sm sm:text-base">
+            <div className="flex items-center text-green-800">
+              <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+              <span>Гарантия 100% возврата, если кандидаты не соответствуют согласованным критериям</span>
+            </div>
+            <div className="flex items-center text-green-800">
+              <Star className="w-5 h-5 mr-3 text-green-600" />
+              <span>Скидка 30% при продолжении сотрудничества без остановки</span>
+            </div>
+            <div className="flex items-center text-green-800">
+              <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+              <span>Все кандидаты прошли видео-интервью и выполнили практические задания</span>
+            </div>
+            <div className="flex items-center text-green-800 font-semibold">
+              <Star className="w-5 h-5 mr-3 text-green-600" />
+              <span>Новым клиентам: 15 кандидатов по цене 5 (экономия 50,500₽)</span>
+            </div>
+          </div>
         </div>
 
         <div className="text-center mt-8 sm:mt-12 px-4">
