@@ -54,6 +54,8 @@ const Footer = () => {
             
             <div className="flex flex-wrap justify-center space-x-4">
               <Link to="/privacy" className="hover:text-white transition-colors">Политика конфиденциальности</Link>
+              <Link to="/offer" className="hover:text-white transition-colors">Договор оферты</Link>
+              <Link to="/personal-data-consent" className="hover:text-white transition-colors">Согласие на обработку данных</Link>
             </div>
           </div>
         </div>
