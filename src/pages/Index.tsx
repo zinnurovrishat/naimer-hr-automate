@@ -1,9 +1,11 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
+import ModernHero from '@/components/ModernHero';
+import ModernHowItWorks from '@/components/ModernHowItWorks';
+import ModernCases from '@/components/ModernCases';
+import ModernCTA from '@/components/ModernCTA';
 import WhyChooseUsSection from '@/components/WhyChooseUsSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
 import ProblemsSection from '@/components/ProblemsSection';
 import WhatYouGetSection from '@/components/WhatYouGetSection';
 import WhoItsFitForSection from '@/components/WhoItsFitForSection';
@@ -23,9 +25,11 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <ScrollProgressBar />
       <Header />
-      <HeroSection />
+      <ModernHero />
+      <ModernHowItWorks />
+      <ModernCases />
+      <ModernCTA />
       <WhyChooseUsSection />
-      <HowItWorksSection />
       <ProblemsSection />
       <WhatYouGetSection />
       <WhoItsFitForSection />
