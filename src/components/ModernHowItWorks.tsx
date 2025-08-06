@@ -6,7 +6,7 @@ const ModernHowItWorks = () => {
     {
       icon: FileText,
       title: 'Оставляете заявку',
-      description: 'Заполняете простую форму с требованиями к кандидатам'
+      description: 'Заполняете простую форму'
     },
     {
       icon: Settings,

@@ -46,21 +46,6 @@ const Header = () => {
             )}
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Услуги
-            </a>
-            <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Тарифы
-            </a>
-            <a href="#client-cases" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Кейсы
-            </a>
-            <a href="#demo-call" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Контакты
-            </a>
-          </nav>
 
           {/* CTA Button & Phone */}
           <div className="hidden md:flex items-center space-x-4">
@@ -91,35 +76,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              <a
-                href="#services"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Услуги
-              </a>
-              <a
-                href="#pricing"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Тарифы
-              </a>
-              <a
-                href="#client-cases"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Кейсы
-              </a>
-              <a
-                href="#demo-call"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Контакты
-              </a>
-              <div className="px-3 py-2 border-t">
+              <div className="px-3 py-2">
                 <a href="tel:+79177969222" className="flex items-center text-gray-700 hover:text-primary transition-colors mb-3">
                   <Phone className="w-4 h-4 mr-2" />
                   <span className="font-medium">+7 (917) 796-92-22</span>

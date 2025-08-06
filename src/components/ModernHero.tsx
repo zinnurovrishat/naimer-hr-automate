@@ -15,7 +15,8 @@ const ModernHero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Нужны сотрудники за 3 дня?{' '}
+            Нужны сотрудники за 3 дня?
+            <br />
             <span className="text-primary">Получите от 5 готовых кандидатов</span>{' '}
             без HR-рутины
           </h1>
