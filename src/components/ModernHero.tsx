@@ -27,14 +27,19 @@ const ModernHero = () => {
 
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 shadow-lg"
+            className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 shadow-lg mb-4"
             onClick={handleGetCandidates}
           >
             Получить кандидатов
           </Button>
 
+          {/* Trust factor */}
+          <p className="text-sm text-gray-500 mb-8">
+            87% клиентов продолжают работать с нами
+          </p>
+
           {/* Scroll indicator */}
-          <div className="mt-16">
+          <div className="mt-8">
             <ArrowDown className="w-6 h-6 text-primary mx-auto animate-bounce" />
           </div>
         </div>
