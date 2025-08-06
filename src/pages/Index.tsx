@@ -13,12 +13,10 @@ import PricingSection from '@/components/PricingSection';
 import StatsSection from '@/components/StatsSection';
 import FAQSection from '@/components/FAQSection';
 import TelegramSection from '@/components/TelegramSection';
-import DemoCallSection from '@/components/DemoCallSection';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
 import StickyConsultButton from '@/components/StickyConsultButton';
-import ClientCasesSection from '@/components/ClientCasesSection';
 
 const Index = () => {
   return (
@@ -27,18 +25,16 @@ const Index = () => {
       <Header />
       <ModernHero />
       <ModernHowItWorks />
+      <ProblemsSection />
       <ModernCases />
       <ModernCTA />
       <WhyChooseUsSection />
-      <ProblemsSection />
       <WhatYouGetSection />
       <WhoItsFitForSection />
       <PricingSection />
-      <ClientCasesSection />
       <StatsSection />
       <FAQSection />
       <TelegramSection />
-      <DemoCallSection />
       <AboutSection />
       <Footer />
       <StickyConsultButton />
