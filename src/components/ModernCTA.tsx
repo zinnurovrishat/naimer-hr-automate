@@ -3,16 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
-import { Phone, User } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { Phone, User, Loader2 } from 'lucide-react';
 
 const ModernCTA = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       toast({
@@ -23,13 +25,38 @@ const ModernCTA = () => {
       return;
     }
 
-    // Здесь можно добавить отправку данных
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в течение 30 минут",
-    });
+    setIsSubmitting(true);
 
-    setFormData({ name: '', phone: '' });
+    try {
+      const { error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: formData.name.trim(),
+            phone: formData.phone.trim(),
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Заявка отправлена!",
+        description: "Мы свяжемся с вами в течение 30 минут",
+      });
+
+      setFormData({ name: '', phone: '' });
+    } catch (error) {
+      console.error('Error submitting lead:', error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте еще раз или свяжитесь с нами по телефону",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -93,9 +120,17 @@ const ModernCTA = () => {
                 <Button 
                   type="submit"
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-12 py-4 shadow-lg"
+                  disabled={isSubmitting}
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-12 py-4 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Хочу поток кандидатов
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Отправляем...
+                    </>
+                  ) : (
+                    'Хочу поток кандидатов'
+                  )}
                 </Button>
                 
                 <p className="text-sm text-gray-500 mt-4">
