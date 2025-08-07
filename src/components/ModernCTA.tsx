@@ -6,6 +6,13 @@ import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Phone, User, Loader2 } from 'lucide-react';
 
+// Объявление типов для Яндекс.Метрики
+declare global {
+  interface Window {
+    ym: (id: number, method: string, url: string) => void;
+  }
+}
+
 const ModernCTA = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -45,6 +52,11 @@ const ModernCTA = () => {
         title: "Заявка отправлена!",
         description: "Мы свяжемся с вами в течение 30 минут",
       });
+
+      // Вызов Яндекс.Метрики для отслеживания цели
+      if (typeof window !== 'undefined' && window.ym) {
+        window.ym(103617602, 'hit', '/virtual/lead');
+      }
 
       setFormData({ name: '', phone: '' });
     } catch (error) {
