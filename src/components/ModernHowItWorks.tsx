@@ -1,22 +1,22 @@
 import React from 'react';
-import { FileText, Settings, Users } from 'lucide-react';
+import { Search, CheckCircle, Handshake } from 'lucide-react';
 
 const ModernHowItWorks = () => {
   const steps = [
     {
-      icon: FileText,
-      title: 'Оставляете заявку',
-      description: 'Заполняете простую форму'
+      icon: Search,
+      title: 'Находим кандидатов, готовых выйти завтра',
+      description: 'Ищем среди тех, кто уже готов к смене работы и может начать сразу'
     },
     {
-      icon: Settings,
-      title: 'Мы настраиваем автонайм',
-      description: 'Запускаем систему поиска и привлечения подходящих кандидатов'
+      icon: CheckCircle,
+      title: 'Проверяем навыки и мотивацию под ваши задачи',
+      description: 'Тестируем опыт, компетенции и готовность работать именно у вас'
     },
     {
-      icon: Users,
-      title: 'Через 2 дня у вас от 5 готовых кандидатов',
-      description: 'Получаете готовых к собеседованию специалистов'
+      icon: Handshake,
+      title: 'Согласовываем только подходящих',
+      description: 'Выдаем контакты тех, кто прошел все проверки и готов к работе'
     }
   ];
 

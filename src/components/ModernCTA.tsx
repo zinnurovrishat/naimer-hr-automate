@@ -81,10 +81,10 @@ const ModernCTA = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Готовы получить поток кандидатов?
+              Готовы закрыть вакансии за 1–5 дней?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Оставьте заявку и получите первых кандидатов уже через 3 дня
+              Оставьте заявку и получите первых готовых кандидатов уже завтра
             </p>
           </div>
 
@@ -141,7 +141,7 @@ const ModernCTA = () => {
                       Отправляем...
                     </>
                   ) : (
-                    'Хочу поток кандидатов'
+                    'Получить кандидатов за 1 день'
                   )}
                 </Button>
                 

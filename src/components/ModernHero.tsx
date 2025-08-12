@@ -15,14 +15,14 @@ const ModernHero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Нужны сотрудники за 3 дня?
+            <span className="text-red-600">Закрывайте вакансии за 1–5 дней</span>
             <br />
-            <span className="text-primary">Получите от 5 готовых кандидатов</span>{' '}
-            без HR-рутины
+            и перестаньте терять деньги
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Автонайм через нашу систему — кандидаты сами приходят, вы выбираете лучших
+            Пока позиции открыты — вы упускаете клиентов, сделки и рост. <br />
+            <span className="text-primary font-semibold">Когда готовые к работе сотрудники выходят завтра — вы зарабатываете больше</span>
           </p>
 
           <Button 
@@ -30,7 +30,7 @@ const ModernHero = () => {
             className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 shadow-lg mb-4"
             onClick={handleGetCandidates}
           >
-            Получить кандидатов
+            Получить кандидатов за 1 день
           </Button>
 
           {/* Trust factor */}

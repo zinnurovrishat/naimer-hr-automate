@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import ModernHero from '@/components/ModernHero';
+import WhyItMatters from '@/components/WhyItMatters';
 import ModernHowItWorks from '@/components/ModernHowItWorks';
 import ModernCases from '@/components/ModernCases';
 import ModernCTA from '@/components/ModernCTA';
@@ -12,6 +13,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <ModernHero />
+      <WhyItMatters />
       <ModernHowItWorks />
       <ModernCases />
       <ModernCTA />
