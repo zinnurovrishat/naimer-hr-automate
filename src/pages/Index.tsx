@@ -7,6 +7,7 @@ import WhyItMatters from '@/components/WhyItMatters';
 import KeyBenefits from '@/components/KeyBenefits';
 import ModernHowItWorks from '@/components/ModernHowItWorks';
 import ModernCases from '@/components/ModernCases';
+import CandidatesSection from '@/components/CandidatesSection';
 import PricingSection from '@/components/PricingSection';
 import ModernCTA from '@/components/ModernCTA';
 import Footer from '@/components/Footer';
@@ -21,6 +22,7 @@ const Index = () => {
       <KeyBenefits />
       <ModernHowItWorks />
       <ModernCases />
+      <CandidatesSection />
       <PricingSection />
       <ModernCTA />
       <Footer />
