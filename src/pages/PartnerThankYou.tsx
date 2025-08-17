@@ -1,17 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import { CheckCircle, ArrowLeft, MessageCircle, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const PartnerThankYou = () => {
+  useEffect(() => {
+    document.title = 'Спасибо за заявку! | Naimer.pro';
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Ваша заявка принята. Мы свяжемся с вами в течение 2 часов для обсуждения деталей сотрудничества.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Спасибо за заявку! | Naimer.pro</title>
-        <meta name="description" content="Ваша заявка принята. Мы свяжемся с вами в течение 2 часов для обсуждения деталей сотрудничества." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">

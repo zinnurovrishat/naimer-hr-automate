@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import PartnerHeader from '@/components/partners/PartnerHeader';
 import ogImage from '@/assets/og-partners.jpg';
 import CommissionBanner from '@/components/partners/CommissionBanner';
@@ -15,40 +14,41 @@ import PartnerForm from '@/components/partners/PartnerForm';
 import PartnerFooter from '@/components/partners/PartnerFooter';
 
 const Partners = () => {
+  useEffect(() => {
+    // Set page title and meta tags
+    document.title = 'Партнёрам Bitrix/amo — комиссия 10–15% за закрытие отдела продаж за 2–3 дня | Naimer.pro';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Приводим 5/15/25 уже отобранных продавцов за 48–72 часа. Без собеседований. Комиссия партнёру 10–15%.');
+    }
+    
+    // Set Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'Партнёрам Bitrix/amo — комиссия 10–15% за закрытие отдела продаж за 2–3 дня');
+    if (!document.querySelector('meta[property="og:title"]')) {
+      document.head.appendChild(ogTitle);
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Приводим 5/15/25 уже отобранных продавцов за 48–72 часа. Без собеседований. Комиссия партнёру 10–15%.');
+    if (!document.querySelector('meta[property="og:description"]')) {
+      document.head.appendChild(ogDescription);
+    }
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', `https://naimer.pro${ogImage}`);
+    if (!document.querySelector('meta[property="og:image"]')) {
+      document.head.appendChild(ogImage);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Партнёрам Bitrix/amo — комиссия 10–15% за закрытие отдела продаж за 2–3 дня | Naimer.pro</title>
-        <meta 
-          name="description" 
-          content="Приводим 5/15/25 уже отобранных продавцов за 48–72 часа. Без собеседований. Комиссия партнёру 10–15%." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://naimer.pro/partners" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://naimer.pro/partners" />
-        <meta property="og:title" content="Партнёрам Bitrix/amo — комиссия 10–15% за закрытие отдела продаж за 2–3 дня" />
-        <meta property="og:description" content="Приводим 5/15/25 уже отобранных продавцов за 48–72 часа. Без собеседований. Комиссия партнёру 10–15%." />
-        <meta property="og:image" content={`https://naimer.pro${ogImage}`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Naimer.pro" />
-        <meta property="og:locale" content="ru_RU" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://naimer.pro/partners" />
-        <meta property="twitter:title" content="Партнёрам Bitrix/amo — комиссия 10–15% за закрытие отдела продаж за 2–3 дня" />
-        <meta property="twitter:description" content="Приводим 5/15/25 уже отобранных продавцов за 48–72 часа. Без собеседований. Комиссия партнёру 10–15%." />
-        <meta property="twitter:image" content={`https://naimer.pro${ogImage}`} />
-        
-        {/* Additional SEO */}
-        <meta name="keywords" content="партнёрам, bitrix24, amocrm, комиссия, продавцы, рекрутинг, отдел продаж" />
-        <meta name="author" content="Naimer.pro" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
       
       <PartnerHeader />
       <CommissionBanner />
