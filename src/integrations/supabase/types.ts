@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "13.0.4"
@@ -35,6 +35,63 @@ export type Database = {
           name?: string
           phone?: string
           status?: string | null
+        }
+        Relationships: []
+      }
+      partner_leads: {
+        Row: {
+          candidates_count: string | null
+          city: string | null
+          comment: string | null
+          company: string
+          consent: boolean
+          contact_info: string
+          contact_person: string
+          created_at: string
+          id: string
+          partner: string | null
+          start_date: string | null
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
+        }
+        Insert: {
+          candidates_count?: string | null
+          city?: string | null
+          comment?: string | null
+          company: string
+          consent?: boolean
+          contact_info: string
+          contact_person: string
+          created_at?: string
+          id?: string
+          partner?: string | null
+          start_date?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+        }
+        Update: {
+          candidates_count?: string | null
+          city?: string | null
+          comment?: string | null
+          company?: string
+          consent?: boolean
+          contact_info?: string
+          contact_person?: string
+          created_at?: string
+          id?: string
+          partner?: string | null
+          start_date?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
         }
         Relationships: []
       }

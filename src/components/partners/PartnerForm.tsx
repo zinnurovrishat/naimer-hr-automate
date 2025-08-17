@@ -75,7 +75,7 @@ const PartnerForm = () => {
     try {
       // Сохраняем в Supabase
       const { error } = await supabase
-        .from('partner_leads')
+        .from('partner_leads' as any)
         .insert([formData]);
 
       if (error) throw error;
