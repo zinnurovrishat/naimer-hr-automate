@@ -3,6 +3,10 @@ import { Button } from '@/components/ui/button';
 
 const PartnerHeader = () => {
   const scrollToForm = () => {
+    // Отправляем событие в Яндекс.Метрику
+    if (window.ym) {
+      window.ym(98571738, 'reachGoal', 'cta_click');
+    }
     document.getElementById('partner-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 

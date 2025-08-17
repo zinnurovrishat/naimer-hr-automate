@@ -75,16 +75,29 @@ const PartnerForm = () => {
     try {
       // Сохраняем в Supabase
       const { error } = await supabase
-        .from('partner_leads' as any)
+        .from('partner_leads')
         .insert([formData]);
 
       if (error) throw error;
 
-      // Яндекс.Метрика событие
-      if (typeof window !== 'undefined' && (window as any).ym) {
-        (window as any).ym(null, 'reachGoal', 'lead_submit');
+      // Отправляем уведомления через edge function
+      try {
+        await supabase.functions.invoke('partner-lead-notify', {
+          body: formData
+        });
+      } catch (notifyError) {
+        console.error('Ошибка отправки уведомлений:', notifyError);
+        // Не прерываем процесс, если уведомления не отправились
       }
 
+      // Успешно сохранено
+      console.log('Заявка успешно отправлена');
+      
+      // Отправляем событие в Яндекс.Метрику
+      if (window.ym) {
+        window.ym(98571738, 'reachGoal', 'partner_form_submit');
+      }
+      
       // Перенаправляем на страницу благодарности
       window.location.href = '/partners/thank-you';
       

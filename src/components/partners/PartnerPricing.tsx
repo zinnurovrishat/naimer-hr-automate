@@ -22,7 +22,11 @@ const PartnerPricing = () => {
     }
   ];
 
-  const scrollToForm = () => {
+  const scrollToForm = (packageName: string) => {
+    // Отправляем событие в Яндекс.Метрику
+    if (window.ym) {
+      window.ym(98571738, 'reachGoal', 'cta_click');
+    }
     document.getElementById('partner-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -66,12 +70,12 @@ const PartnerPricing = () => {
                 </p>
               </div>
 
-              <Button 
-                onClick={scrollToForm}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                Передать лида
-              </Button>
+                  <Button 
+                    onClick={() => scrollToForm(pkg.candidates)}
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    Передать лида
+                  </Button>
             </div>
           ))}
         </div>

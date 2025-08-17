@@ -1,59 +1,110 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowLeft, MessageCircle, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, MessageCircle, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PartnerThankYou = () => {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="bg-primary/10 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-8">
-          <CheckCircle className="h-12 w-12 text-primary" />
-        </div>
-        
-        <h1 className="text-3xl font-bold text-foreground mb-4">
-          Спасибо за заявку!
-        </h1>
-        
-        <p className="text-lg text-muted-foreground mb-8">
-          Свяжемся в течение 10 минут в рабочее время. 
-          Можете сразу написать в Telegram или WhatsApp для более быстрой связи.
-        </p>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Спасибо за заявку! | Naimer.pro</title>
+        <meta name="description" content="Ваша заявка принята. Мы свяжемся с вами в течение 2 часов для обсуждения деталей сотрудничества." />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
 
-        <div className="flex justify-center space-x-4 mb-8">
-          <a
-            href="https://t.me/neura_core"
-            className="flex items-center space-x-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition"
-          >
-            <Send className="h-5 w-5" />
-            <span>Telegram</span>
-          </a>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
+            <CheckCircle className="h-8 w-8 text-green-600" />
+          </div>
           
-          <a
-            href="https://wa.me/79177969222"
-            className="flex items-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
-          >
-            <MessageCircle className="h-5 w-5" />
-            <span>WhatsApp</span>
-          </a>
-        </div>
-
-        <div className="space-y-4 text-left bg-muted p-6 rounded-lg">
-          <h3 className="font-semibold text-foreground">Что дальше:</h3>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>• Проанализируем заявку и свяжемся с вами</li>
-            <li>• Обсудим детали потребностей клиента</li>
-            <li>• Подготовим коммерческое предложение</li>
-            <li>• Запустим поиск кандидатов после подписания договора</li>
-          </ul>
-        </div>
-
-        <div className="mt-8">
-          <Link to="/partners">
-            <Button variant="outline">
-              Вернуться на страницу партнёров
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Заявка принята!
+          </h1>
+          
+          <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
+            Мы получили вашу заявку и свяжемся с вами в течение <strong>2 часов</strong> 
+            для обсуждения деталей сотрудничества.
+          </p>
+          
+          <div className="bg-muted/50 rounded-lg p-6 mb-8">
+            <h2 className="text-xl font-semibold text-foreground mb-4">
+              Что дальше?
+            </h2>
+            <div className="space-y-3 text-left">
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-medium">
+                  1
+                </div>
+                <p className="text-muted-foreground">
+                  Мы изучим вашу заявку и подготовим персональное предложение
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-medium">
+                  2
+                </div>
+                <p className="text-muted-foreground">
+                  Наш менеджер свяжется с вами для обсуждения условий
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-medium">
+                  3
+                </div>
+                <p className="text-muted-foreground">
+                  Оформим партнёрское соглашение и начнём работу
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild variant="outline">
+              <Link to="/partners">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Вернуться назад
+              </Link>
             </Button>
-          </Link>
+            
+            <Button asChild>
+              <a 
+                href="https://t.me/naimer_sales" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Написать в Telegram
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-border">
+            <h3 className="text-lg font-semibold text-foreground mb-4">
+              Остались вопросы?
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-muted-foreground">
+              <a 
+                href="https://t.me/naimer_sales" 
+                className="hover:text-primary transition flex items-center justify-center"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="h-4 w-4 mr-1" />
+                Telegram: @naimer_sales
+              </a>
+              <a 
+                href="https://wa.me/79991234567" 
+                className="hover:text-primary transition"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                WhatsApp: +7 999 123-45-67
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
